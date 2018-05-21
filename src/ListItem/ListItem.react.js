@@ -371,12 +371,14 @@ class ListItem extends PureComponent {
                             </Text>
                         </View>
                     </View>
-                    {secondaryText &&
-                        <View>
-                            <Text numberOfLines={secondLineNumber} style={styles.secondaryText}>
-                                {secondaryText}
-                            </Text>
-                        </View>
+                    {secondaryText
+                     ?
+                       <View>
+                         <Text numberOfLines={secondLineNumber} style={styles.secondaryText}>
+                           {secondaryText}
+                         </Text>
+                       </View>
+                     : null
                     }
                     {tertiaryText &&
                         <View>
